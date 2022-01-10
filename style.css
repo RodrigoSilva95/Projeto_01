@@ -1,7 +1,197 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap');
 
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Zen Maru Gothic', sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #c2baba, #c2baba)
+}
+
+section .color {
+    position: absolute;
+    filter: blur(100px);
+}
+
+section .color:nth-child(1) {
+    top: -50px;
+    width: 700px;
+    height: 600px;
+    background: #4eb5c7;
+}
+
+section .color:nth-child(2) {
+    bottom: 120px;
+    left: 100px;
+    width: 500px;
+    height: 600px;
+    background: #a9ff87;
+}
+
+section .color:nth-child(3) {
+    bottom: 210px;
+    right: 100px;
+    width: 400px;
+    height: 450px;
+    background: #ff009d;
+}
+
+.box {
+    position: relative;
+}
+
+.box .square {
+    position: absolute;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffffff80;
+    border-right: 1px solid #ffffff33;
+    border-bottom: 1px solid #ffffff33;
+    background: #ffffff1a;
+    border-radius: 10px;
+    animation: animate 5s linear infinite; /* Animação infinita para os quadrados. (Com delay 5s)*/
+    animation-delay: calc(-3s * var(--i));
+}
+
+@keyframes animate {
+    0%, 100% {
+        transform: translateY(-50px);
+    }
+    50% {
+        transform: translateY(50px);
+    }
+}
+
+.box .square:nth-child(1) {
+    top: -20px;
+    right: -80px;
+    width: 120px;
+    height: 150px;
+}
+
+.box .square:nth-child(2) {
+    top: 150px;
+    left: -95px;
+    width: 115px;
+    height: 150px;
+    z-index: 2;
+}
+
+.box .square:nth-child(3) {
+    bottom: 40px;
+    right: -60px;
+    width: 75px;
+    height: 60px;
+    z-index: 2;
+}
+
+.box .square:nth-child(4) {
+    bottom: -75px;
+    left: 150px;
+    width: 50px;
+    height: 50px;
+}
+
+.box .square:nth-child(5) {
+    top: -75px;
+    left: 150px;
+    width: 60px;
+    height: 60px;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    min-height: 400px;
+    background: #ffffff1a;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ffffff00;
+    border-right: 1px solid #ffffff00;
+    border-bottom: 1px solid #ffffff00;
+}
+
+.form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding: 40px;
+}
+
+.form h2 {
+    position: relative;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+.form h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    width: 80px;
+    height: 4px;
+    background: #ffffff;
+}
+
+.form .inputBox {
+    width: 90%;
+    margin-top: 10px;
+}
+
+.form .inputBox input {
+    width: 100%;
+    background: #ffffff1a;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 35px;
+    border: 1px solid #ffffff80;
+    border-right: 1px solid #ffffff33;
+    border-bottom: 1px solid #ffffff33;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.form .inputBox input::placeholder {
+    color: #ffffff;
+}
+
+.form .inputBox input[type="submit"] {
+    background: #ffffff;
+    color: #666;
+    max-width:100px;
+    cursor: pointer;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.forget {
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+.forget a {
+    color: #968f8f;
+    font-weight: 600;
+
 }
