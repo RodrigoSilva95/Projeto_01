@@ -148,7 +148,7 @@ section .color:nth-child(3) {
     bottom: -10px;
     width: 80px;
     height: 4px;
-    background: #ffffff;
+    background: #666;
 }
 
 .form .inputBox {
@@ -191,6 +191,6 @@ section .color:nth-child(3) {
 }
 
 .forget a {
-    color: #968f8f;
+    color: #666;
     font-weight: 600;
 }
